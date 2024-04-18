@@ -1,12 +1,14 @@
+export type Results = {
+    id: number,
+    name: string,
+    status: string
+}
+
 export type RickAndMortyData = {
     info: {
         count: number
     }
-    results: {
-        id: number,
-        name: string,
-        status: string
-    }[]
+    results: Results[]
 }
 
 export async function getResponse(): Promise<RickAndMortyData> {

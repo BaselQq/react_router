@@ -1,4 +1,4 @@
-import { getResponse, RickAndMortyData } from "../api/RickAndMortyResponse.ts";
+import { getResponse, Results, RickAndMortyData } from "../api/RickAndMortyResponse.ts";
 import { useEffect, useState } from "react";
 import RickAndMortyCard from "./RickAndMortyCard.tsx";
 
@@ -17,8 +17,8 @@ const RickAndMortyCharacters = () => {
 
     return(
         <>
-            {characters?.results.map((character) => (
-                <RickAndMortyCard results={character}/>
+            {characters?.results.map((character: Results) => (
+                <RickAndMortyCard results={character} key={character.id}/>
             ))}
         </>
     )

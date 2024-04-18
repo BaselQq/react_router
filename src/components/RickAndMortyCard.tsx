@@ -1,18 +1,13 @@
-import { RickAndMortyData } from "../api/RickAndMortyResponse.ts";
-import { useState } from "react";
-import RickAndMortyCharacters from "./RickAndMortyCharacters.tsx";
 import { Link } from "react-router-dom";
 
-export default function RickAndMortyCard(props: Readonly<RickAndMortyData>) {
-    // const [search, setSearch] = useState("");
-    //
-    // const handleChange = (e: { target: {value: string}}) => {
-    //     setSearch(e.target.value);
-    // }
+export default function RickAndMortyCard(props: {results: {
+        id: number,
+        name: string,
+        status: string
+    }}) {
 
     return (
         <>
-            {/*<input type="text" onChange={handleChange}/>*/}
             {
                 (
                     <div>
